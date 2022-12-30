@@ -1,0 +1,43 @@
+package kr.go.mss.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import kr.go.mss.dto.BoardDTO;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+
+	@Override
+	public List<BoardDTO> boardList() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BoardDTO boardDetail(int seq) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void boardInsert(BoardDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void boardDelete(int seq) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void boardEdit(BoardDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}
