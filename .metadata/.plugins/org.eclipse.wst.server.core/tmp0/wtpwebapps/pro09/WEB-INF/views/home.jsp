@@ -19,36 +19,119 @@
 			<!-- 헤더 부분 인클루드 -->
 		 <jsp:include page="include/header.jsp"></jsp:include>
 	</header>
-	
-<main>
-  <div class="container">
-	<div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
+<div class="container px-4 px-lg-5 nimg">
+ <section class="slider-three">
+    <div class="container">
+    <div class="slider-items-wrapper">
+        <div class="row slider-items-active">
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://www.mss.go.kr/common/board/ThumbnailPopupZone.do?mzIdx=MZ01000510&width=460&height=350" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://www.mss.go.kr/common/board/ThumbnailPopupZone.do?mzIdx=MZ01000921&width=460&height=350" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://www.mss.go.kr/common/board/ThumbnailPopupZone.do?mzIdx=MZ01000960&width=460&height=350" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+          <div class="col-lg-4">
+            <div class="single-items-one">
+              <img src="https://www.mss.go.kr/common/board/ThumbnailPopupZone.do?mzIdx=MZ01000951&width=460&height=350" alt="Image" />
+            </div>
+            <!-- single-items-one -->
+          </div>
+        </div>
+        <!-- row -->
       </div>
     </div>
+    <!-- container -->
+  </section>
+<script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script>
+<script>
+      //======== tiny slider for slider-items-active
+      tns({
+         autoplay: true,
+         autoplayButtonOutput: false,
+         mouseDrag: true,
+         gutter: 0,
+         container: ".slider-items-active",
+         center: false,
+         nav: true,
+         navPosition: "bottom",
+         controls: false,
+         speed: 400,
+         controlsText: [
+            '<i class="lni lni-arrow-left-circle"></i>',
+            '<i class="lni lni-arrow-right-circle"></i>',
+         ],
+         responsive: {
+            0: {
+               items: 1,
+            },
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2>Change the background</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Add borders</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
-        </div>
-      </div>
-    </div>
-</div>
-</main>
-	
+            768: {
+               items: 2,
+            },
+            992: {
+               items: 3,
+            },
+         },
+      });
+   </script>
+   
+    <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5 nimg">
+                <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0"
+                        src="https://www.mss.go.kr/common/board/Thumbnail.do?bcIdx=1038241&cbIdx=288&streFileNm=772f930a-4add-49a2-9139-a0d7ab94c7ee.png" alt="..." /></div>
+                <div class="col-lg-7">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">공지사항</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>[입찰재공고] 2023년 중소기업 정보시스템 통합 운영 및 유지관리</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                          <tr>
+                            <td>우리부 대표 홈페이지 조사통계DB 오프라인 작업 안내</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                          <tr>
+                            <td>2023년 중소기업 정보시스템 통합 운영 및 유지관리</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                          <tr>
+                            <td>'22년도 인재육성형 중소기업 지정기업 명단 알림</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                          <tr>
+                            <td>중소기업 ESG 실천방안 설명회 안내</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                          <tr>
+                            <td>2022년 창업기업제품 공공구매 촉진 유공포상 공고(연장)</td>
+                            <td>2023-01-03</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                </div>
+                
+            </div>
+            
+            
+       </div>
 	<footer id="footer">
 	    	<!-- 푸터 부분 인클루드 -->
 	    <jsp:include page="include/footer.jsp"></jsp:include>

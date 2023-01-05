@@ -1,0 +1,275 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path0" value="${pageContext.request.contextPath }" />
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"/>
+<script src="cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+$(document).ready( function() {
+    $('#tb').DataTable();
+});
+</script>
+
+<style>
+🐣 EARLY BIRD DISCOUNT
+on All-Access - Get 20% Recurring OFF! - SAVE OVER 40% | Coupon:
+EARLYBIRD
+
+
+logo
+Templates
+Components
+Inspirations
+Tools
+
+Brands
+Search Items ...
+
+Get All-Access
+Tailwind Components Docs
+Bootstrap Components Docs
+Bootstrap
+Tailwind
+All
+
+Features & Services
+21
+
+Alerts
+16
+
+Pricing Tables
+15
+
+Blogs
+14
+
+Cards
+14
+
+Footers
+13
+
+Headers
+13
+
+List Styles
+12
+
+Contacts
+10
+
+Navbars
+10
+
+About
+9
+
+Sliders
+9
+
+Forms
+9
+
+Call To Actions
+8
+
+Teams
+8
+
+Toggle Buttons
+8
+
+Section Titles
+7
+
+Testimonials
+7
+
+Labels
+7
+
+Sign In/Sign Up
+6
+
+Portfolios
+6
+
+Tabs
+6
+
+Buttons
+6
+
+Clients
+5
+
+Error Pages
+4
+
+Accordions
+4
+
+Profiles
+3
+
+Product Page
+3
+
+Videos
+3
+
+Checkout
+2
+
+Coming Soon Pages
+2
+Sliders and Scrollers for Bootstrap
+Slider pages have become very fashionable lately. So, you are not wrong if you feel like having a slider page on your website. Moreover, with some tremendous designs with Bootstrap sections, you can get exactly what you want and showcase your information in the slider pages of your website. There are 8 pro designs and one free one, so you can get started with whatever appeals to you the most.
+
+Slider Style 1
+Free
+Slider Style 1
+Bootstrap
+Slider Style 3
+Free
+Slider Style 3
+Bootstrap
+FREE
+Slider Style 3
+
+
+
+Preview
+
+HTML
+
+CSS
+
+
+Copy
+/*===== SLIDER THREE =====*/
+.slider-three {
+  background-color: var(--light-2);
+  padding-top: 112px;
+  padding-bottom: 130px;
+}
+.slider-three .section-title .title {
+  font-size: 44px;
+  line-height: 55px;
+  font-weight: 600;
+  color: var(--black);
+}
+@media (max-width: 767px) {
+  .slider-three .section-title .title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+.slider-three .section-title .text {
+  color: var(--dark-3);
+  margin-top: 24px;
+}
+.slider-three .slider-items-wrapper {
+  position: relative;
+}
+.slider-three .slider-items-wrapper .tns-nav {
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.slider-three .slider-items-wrapper .tns-nav button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  opacity: 0.5;
+  border: 0;
+  margin: 0 5px;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.slider-three .slider-items-wrapper .tns-nav button.tns-nav-active {
+  width: 20px;
+  opacity: 1;
+  border-radius: 5px;
+}
+.slider-three .single-items-one {
+  margin-top: 40px;
+}
+.slider-three .single-items-one img {
+  width: 100%;
+  box-shadow: var(--shadow-2);
+  border-radius: 10px;
+}
+Slider Style 7
+Pro
+Slider Style 7
+Bootstrap
+Slider Style 5
+Pro
+Slider Style 5
+Bootstrap
+Slider Style 6
+Pro
+Slider Style 6
+Bootstrap
+Slider Style 8
+Pro
+Slider Style 8
+Bootstrap
+Slider Style 9
+Pro
+Slider Style 9
+Bootstrap
+Slider Style 4
+Pro
+Slider Style 4
+Bootstrap
+Slider Style 2
+Pro
+Slider Style 2
+Bootstrap
+Resources
+Site Support
+Our Blog
+Contact us
+Design Inspirations
+For Customers
+Template Support
+Pricing
+Customer's FAQ
+All Access FAQ
+Terms
+Privacy Policy
+Terms and Conditions
+License & Copyright
+Refund Policy
+Support & Help
+Documentation
+Open Support Ticket
+Join Our Community
+About Us
+Let's Connect
+Join our discord community and connect us social media to recive regular updates!
+
+Our Products
+Our other brands and products, you might be interested
+
+© Copyright 2014-2022 | GrayGrids - Pimjo Labs
+
+Pricing | GrayGrids
+</style>

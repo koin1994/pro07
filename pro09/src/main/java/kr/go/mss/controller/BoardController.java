@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.go.mss.dto.BoardDTO;
 import kr.go.mss.service.BoardService;
@@ -22,14 +21,14 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	@GetMapping("list.do")		
+	@GetMapping("list.do")		//board/list.do
 	public String getBoardList(Model model) throws Exception {
 		List<BoardDTO> boardList = boardService.boardList(); 
 		model.addAttribute("boardList", boardList);
 		return "board/boardList";
 	}
 	
-	@GetMapping("detail.do")	
+	@GetMapping("detail.do")	//board/detail.do?seq=1
 	public String getBoardDetail(HttpServletRequest request, Model model) throws Exception {
 		int seq = Integer.parseInt(request.getParameter("seq"));
 		BoardDTO dto = boardService.boardDetail(seq);

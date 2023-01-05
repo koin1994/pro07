@@ -17,29 +17,25 @@
     <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
-	<header id="header">
-		<!-- 헤더 부분 인클루드 -->
-	 	<jsp:include page="../include/header.jsp"></jsp:include>
-    </header>
-	<div class="content" id="content">
-	    <div class="blog-header lh-1 py-3">
-	      <hr><h2 class="h1" style="text-align:center;">공지사항</h2>
-	      <hr>
-	      <div class="container">
-		      <table id="tb">
-		      	<thead>
-		      		<tr>
-		      			<th width="80">No</th>
-		      			<th>Title</th>
-		      			<th width="120">RegDate</th>
-		      			<th width="100">Visited</th>
-		      		</tr>
-		      	</thead>
-		      	<tbody>
+	<div class="wrap">
+		<jsp:include page="../include/header.jsp" />
+		<!-- content -->
+		<div class="container content">
+		<h2 class="h1" style="text-align:center";>공지사항</h2>
+			<table id="tb" class="table table-striped" style="width:100%">
+		        <thead>
+		            <tr>
+		                <th>번호</th>
+		                <th>제목</th>
+		                <th>작성일</th>
+		                <th>조회수</th>
+		            </tr>
+		        </thead>
+		        <tbody>
 		      	<c:forEach items="${boardList }" var="board" varStatus="status">
 		      		<tr>
 		      			<td>${status.count }</td>
-		      			<td><a href="/board/detail.do?seq=${board.seq }">${board.title }</a></td>
+		      			<td><a href="${path1 }/board/detail.do?seq=${board.seq }">${board.title }</a></td>
 		      			<td>
 	      					<fmt:parseDate value="${board.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
 	      					<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
@@ -49,17 +45,16 @@
 		      	</c:forEach>	
 		      	</tbody>
 		      </table>
-			      	    <%-- <c:if test='${sid eq "admin"}'>  --%> 
+			 <c:if test='${sid eq "admin"}'>  
 		      	<div class="button-group">
-				  <a class="button" href="${path1 }/board/insert.do">글쓰기</a>
+				  <a class="btn btn-outline-secondary" href="${path1 }/board/insert.do">글쓰기</a>
 				</div>
-			<%-- </c:if> --%>
+			 </c:if>
 	      </div>
 	    </div>
-	</div>
-    <footer id="footer" class="footer-nav row expanded collapse">
-    	<!-- 푸터 부분 인클루드 -->
-    	<jsp:include page="../include/footer.jsp"></jsp:include>
-    </footer>
+	
+    <div class="fixed-bottom">
+			<jsp:include page="../include/footer.jsp" />
+		</div>
 </body>
 </html>

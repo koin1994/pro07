@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지사항 글 쓰기</title>
+	<title>글 쓰기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
@@ -52,7 +52,8 @@
 	      </div>
 	    </div>
 	</div>
-  	<footer id="footer" class="footer-nav row expanded collapse">
+    <footer id="footer" class="footer-nav row expanded collapse">
+    	<!-- 푸터 부분 인클루드 -->
     	<jsp:include page="../include/footer.jsp"></jsp:include>
     </footer>
 </body>

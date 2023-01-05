@@ -9,13 +9,20 @@
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="/" ><img src="https://www.mss.go.kr/images/np/bg_logo.png" alt="Logo" width="200px" height="40px"></a>
+        <a class="link-secondary" href="/mss" ><img src="https://www.mss.go.kr/images/np/bg_logo.png" alt="Logo" width="200px" height="40px"></a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <c:if test="${empty sid }">
-      <button type="button" class="btn btn-outline-secondary me-md-2" a href="${path1 }/member/loginForm.do">로그인</button>
-	  <button type="button" class="btn btn-outline-secondary" a href="${path1 }/member/agree.do">회원가입</button>
+      <button type="button" class="btn btn-dark me-md-2"> <a href="${path1 }/member/loginForm.do" style="color:white;">로그인</a></button>
+	  <button type="button" class="btn btn-dark"> <a href="${path1 }/member/agree.do" style="color:white;">회원가입</a></button>
 	  </c:if>
+	  <c:if test="${not empty sid }">  
+      <button type="button" class="btn btn-dark me-md-2"> <a href="${path1 }/member/logout.do" style="color:white;">로그아웃</a></button>
+	  <button type="button" class="btn btn-dark me-md-2"> <a href="${path1 }/member/read.do" style="color:white;">회원정보</a></button>
+        </c:if>  
+        <c:if test='${sid eq "admin"}'>
+          <button type="button" class="btn btn-dark"> <a href="${path1 }#" style="color:white;">관리자페이지</a></button>
+        </c:if>  
       </div>
     </div>
   </header>
@@ -85,14 +92,15 @@
 	        
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Dropdown link
+	            고객센터
 	          </a>
 	          <ul class="dropdown-menu">
-	            <li><a class="dropdown-item" href="#">Action</a></li>
-	            <li><a class="dropdown-item" href="#">Another action</a></li>
-	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	            <li><a class="dropdown-item" href="${path1 }/board/list.do">공지사항</a></li>
+	            <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
+	            <li><a class="dropdown-item" href="#">자유게시판</a></li>
 	          </ul>
 	        </li>
+	        
 	      </ul>
 	    </div>
 	  </div>
