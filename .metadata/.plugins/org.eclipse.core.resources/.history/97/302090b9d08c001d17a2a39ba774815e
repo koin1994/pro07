@@ -1,0 +1,16 @@
+package kr.go.mss;
+
+import java.util.List;
+import java.util.Map;
+
+public interface RestService {
+
+	static Map<String, String> getTest1(String id, String pw) {
+		return null;
+	}
+
+	static List<String> getTest2(String id) {
+		return null;
+	}
+	
+}

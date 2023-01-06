@@ -13,11 +13,11 @@
 	<title>회원 약관 동의</title>
 	<!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
-<style>
-.title { padding-top:36px; padding-bottom:20px; }
-.agree_fr { width: 900px; white-space:pre-wrap; margin: 10px auto; 
-padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
-</style>
+	<style>
+	.title { padding-top:36px; padding-bottom:20px; }
+	.agree_fr { width: 1300px; white-space:pre-wrap; margin: 10px auto; 
+	padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
+	</style>
 </head>
 <body>
 <header id="header">
@@ -25,8 +25,8 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
  	<jsp:include page="../include/header.jsp"></jsp:include>
 </header>
 <div class="content container" id="content">
-	<h2 class="title">회원 약관 동의</h2>
-	<article class="agree_fr">
+	<h1 class="h3 mb-3 fw-normal" style="text-align:center;">회원 약관</h1>
+<article class="agree_fr">
 <h2>제1장 총칙</h2>
 
 제1조(목적) 이 약관은 회사가 온라인으로 제공하는 디지털콘텐츠(이하 "콘텐츠"라고 한다) 및 제반서비스의 이용과 관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을 목적으로 합니다. 
@@ -918,7 +918,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	</div>
 	<br><hr><br>	
 	<div class="btn-group">
-		<button type="button" id="in_btn1" class="button is-info">다음 단계</button>
+		<button type="button" id="in_btn1" class="btn btn-outline-secondary">다음 단계</button>
 	</div>
 	<script>
 	var ck_item1 = document.getElementById("ck_item1");

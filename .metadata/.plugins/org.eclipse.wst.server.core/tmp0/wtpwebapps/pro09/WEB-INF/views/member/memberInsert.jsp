@@ -7,6 +7,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	.content { margin-top: 10%; height: 60.3vh;}
+     .wrap { 
+		width: 1200px;
+		margin: 0 auto;	
+		margin-top: 5%;	
+		margin-bottom: 5%;	
+	}
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +32,7 @@
 	<div class="container" id="con">
 		<div class="row column">
 	      <h2 class="h1" style="text-align:center;">회원가입</h2>
-	      <div class="container">
+	      <div class="warp">
 	      	<form name="frm1" id="frm1" action="${path1 }/member/insert.do" method="post" onsubmit="return joinCheck(this)">
 			      <table id="tb">
 			      	<tbody>
@@ -91,8 +100,8 @@
 			      		</tr>
 			      		<tr>
 			      			<td colspan="2">
-			      				<input type="submit" class="submit success button" value="회원 가입" >
-								<input type="reset" class="reset button" value="취소" >
+			      				  <button class="btn btn-primary" type="submit">로그인</button>
+			   					  <button class="btn btn-danger" type="reset">취소</button>
 			      			</td>
 			      		</tr>
 			      	</tbody>

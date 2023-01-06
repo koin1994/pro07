@@ -27,6 +27,7 @@
 	<resources mapping="/research/**" location="/WEB-INF/views/research" />
 	<resources mapping="/board/**" location="/WEB-INF/views/board" />
 	<resources mapping="/member/**" location="/WEB-INF/views/member" />
+	<resources mapping="/free/**" location="/WEB-INF/views/free" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

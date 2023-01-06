@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="free">
+	<select id="freeList" resultType="kr.go.mss.dto.FreeDTO">
+		select * from free
+	</select>
+	
+	<select id="freeDetail" resultType="kr.go.mss.dto.FreeDTO">
+		select * from free where fseq= #{fseq}
+	</select>
+	
+	<select id="freeInsert" resultType="kr.go.mss.dto.FreeDTO">
+		insert into free values ((select nvl(max(fseq), 0)+1 from free), #{title}, #{content}, #{nickname }, sysdate, 0)
+	</select>
+	
+	<select id="freeEdit" resultType="kr.go.mss.dto.FreeDTO">
+		update free set title = #{title }, content = #{content } where fseq = ${fseq }
+	</select>
+	
+	<select id="freeDelete" resultType="kr.go.mss.dto.FreeDTO">
+		delete from free where fseq = #{fseq }
+	</select>
+</mapper>

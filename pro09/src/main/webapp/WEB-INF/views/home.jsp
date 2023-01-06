@@ -56,7 +56,7 @@
   </section>
 <script src="https://cdn.ayroui.com/1.0/js/tiny-slider.js"></script>
 <script>
-      //======== tiny slider for slider-items-active
+      
       tns({
          autoplay: true,
          autoplayButtonOutput: false,
@@ -86,10 +86,8 @@
          },
       });
    </script>
-   
-    <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5 nimg">
-                <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0"
+   		<div class="row gx-4 gx-lg-5 align-items-center my-5 nimg">
+                <div class="col-lg-4"><img class="img-fluid rounded mb-4 mb-lg-0"
                         src="https://www.mss.go.kr/common/board/Thumbnail.do?bcIdx=1038241&cbIdx=288&streFileNm=772f930a-4add-49a2-9139-a0d7ab94c7ee.png" alt="..." /></div>
                 <div class="col-lg-7">
                     <table class="table">
@@ -125,12 +123,8 @@
                           </tr>
                         </tbody>
                       </table>
-                      
                 </div>
-                
             </div>
-            
-            
        </div>
 	<footer id="footer">
 	    	<!-- 푸터 부분 인클루드 -->

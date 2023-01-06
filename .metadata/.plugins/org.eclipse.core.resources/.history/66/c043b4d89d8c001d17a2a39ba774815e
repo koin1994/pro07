@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="qna">
+	<!-- qna목록 -->
+	<select id="list" resultType="com.dongwon.dto.QnaDTO">
+		select * from qna
+	</select>
+	<!-- 상세 글 보기 -->
+	<select id="detail" resultType="com.dongwon.dto.QnaDTO">
+		select * from qna where no= #{no}
+	</select>
+	
+	<!-- 질문 작성 -->
+	<select id="qAdd" resultType="com.dongwon.dto.QnaDTO">
+		insert into qna values((select nvl(max(no), 0)+1 from qna), #{title}, #{content}, #{author}, sysdate, 0, (select nvl(max(no), 0)+1 from qna))
+	</select>
+		
+	<!-- 답변 작성 -->
+	<select id="aAdd" resultType="com.dongwon.dto.QnaDTO">
+		insert into qna values((select nvl(max(no), 0)+1 from qna), #{title}, #{content}, #{author}, sysdate, 1, #{parno})
+	</select>
+	
+	<!-- 질문 및 답변 삭제 -->
+	<select id="del" resultType="com.dongwon.dto.QnaDTO">
+		delete from qna where no = #{no}
+	</select>
+	<!-- 질문 및 답변 수정 -->
+	<select id="edit" resultType="com.dongwon.dto.QnaDTO">
+		update qna set title=#{title}, content = #{content} where no = #{no}
+	</select>
+
+</mapper>

@@ -21,7 +21,7 @@
 		<jsp:include page="../include/header.jsp" />
 		<!-- content -->
 		<div class="container content">
-		<h2 class="h1" style="text-align:center";>공지사항</h2>
+		<h2 class="h1" style="text-align:center;">공지사항</h2>
 			<table id="tb" class="table table-striped" style="width:100%">
 		        <thead>
 		            <tr>

@@ -9,7 +9,7 @@
   <header class="blog-header lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="link-secondary" href="/mss" ><img src="https://www.mss.go.kr/images/np/bg_logo.png" alt="Logo" width="200px" height="40px"></a>
+        <a class="link-secondary" href="/" ><img src="https://www.mss.go.kr/images/np/bg_logo.png" alt="Logo" width="200px" height="40px"></a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <c:if test="${empty sid }">
@@ -37,23 +37,23 @@
 	      <div class="hstack gap-5">
 	       <li class="nav-item dropdown">
 	          <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Dropdown link
+	            기관소개
 	          </a>
 	          <ul class="dropdown-menu">
-	            <li><a class="dropdown-item" href="#">Action</a></li>
-	            <li><a class="dropdown-item" href="#">Another action</a></li>
-	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	            <li><a class="dropdown-item" href="#">기관소개</a></li>
+	            <li><a class="dropdown-item" href="#">연혁</a></li>
+	            <li><a class="dropdown-item" href="#">찾아오시는 길</a></li>
 	          </ul>
 	        </li>
 	        
 	        <li class="nav-item dropdown">
 	          <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Dropdown link
+	            알림소식
 	          </a>
 	          <ul class="dropdown-menu">
-	            <li><a class="dropdown-item" href="#">Action</a></li>
-	            <li><a class="dropdown-item" href="#">Another action</a></li>
-	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	            <li><a class="dropdown-item" href="#">동영상뉴스</a></li>
+	            <li><a class="dropdown-item" href="#">보도자료</a></li>
+	            <li><a class="dropdown-item" href="#">블로그/SNS</a></li>
 	          </ul>
 	        </li>
 	        
@@ -96,8 +96,8 @@
 	          </a>
 	          <ul class="dropdown-menu">
 	            <li><a class="dropdown-item" href="${path1 }/board/list.do">공지사항</a></li>
-	            <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
-	            <li><a class="dropdown-item" href="#">자유게시판</a></li>
+	            <li><a class="dropdown-item" href="${path1 }/qna/list.do">Q&A</a></li>
+	            <li><a class="dropdown-item" href="${path1 }/free/list.do">자유게시판</a></li>
 	          </ul>
 	        </li>
 	        
