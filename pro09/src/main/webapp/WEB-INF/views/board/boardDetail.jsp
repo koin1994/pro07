@@ -57,8 +57,10 @@
 		      </table>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start" style="padding-top:15px;">
 				  <a class="btn btn-outline-secondary" href="${path1 }/board/list.do">글 목록</a>
+				 <c:if test='${sid eq "admin"}'>  
 				  <a class="btn btn-outline-secondary" href="${path1 }/board/delete.do?seq=${dto.seq}">글 삭제</a>
 				  <a class="btn btn-outline-secondary" href="${path1 }/board/edit.do?seq=${dto.seq}">글 수정</a>
+				 </c:if>
 				</div>
 	      </div>
 	    </div>

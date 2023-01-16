@@ -17,16 +17,16 @@ import kr.go.mss.dto.SampleDTO;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
 public class MapperTest {
-	private static final Logger log = LoggerFactory.getLogger(MapperTest.class);
+	
 
 	@Inject
-	SqlSession sqlSession;//템플릿 메소드 패턴을 구현한 session주입
+	SqlSession sqlSession;
 	
 	@Test
 	public void test2() { 
 		List<SampleDTO> list = sqlSession.selectList("sample.sampleList");
-		for (SampleDTO sampleList : list) {
-			log.info(sampleList.toString());
+		for(SampleDTO sampleList : list) {
+	
 		}
 	}
 }

@@ -3,7 +3,6 @@ package kr.go.mss.controller;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -96,7 +95,7 @@ public class FreeController {
 		return "redirect:list.do";
 	}
 	
-	//ckeditor를 이용한 이미지 업로드
+	
     @RequestMapping(value="imageUpload.do", method = RequestMethod.POST)
     public void imageUpload(HttpServletRequest request,
     		HttpServletResponse response, MultipartHttpServletRequest multiFile
@@ -129,7 +128,7 @@ public class FreeController {
     		}
     	}
     	
-    	out = new FileOutputStream(new File(ckUploadPath));
+    	
     	out.write(bytes);
     	out.flush(); // outputStram에 저장된 데이터를 전송하고 초기화
     	
@@ -152,21 +151,18 @@ public class FreeController {
     	return;
     }
     
-    //ckeditor를 이용한 서버에 전송된 이미지 뿌려주기
     @RequestMapping(value="ckImgSubmit.do")
     public void ckSubmit(@RequestParam(value="uid") String uid
     		, @RequestParam(value="fileName") String fileName
     		, HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException{
     	
-    	//서버에 저장된 이미지 경로
     	String path = "D:\\kty\\pro04\\pro04\\src\\main\\webapp\\resources\\upload" + "ckImage/";	// 저장된 이미지 경로
     	System.out.println("path:"+path);
     	String sDirPath = path + uid + "_" + fileName;
     	
     	File imgFile = new File(sDirPath);
     	
-    	//사진 이미지 찾지 못하는 경우 예외처리로 빈 이미지 파일을 설정한다.
     	if(imgFile.isFile()){
     		byte[] buf = new byte[1024];
     		int readByte = 0;
@@ -178,7 +174,7 @@ public class FreeController {
     		ServletOutputStream out = null;
     		
     		try{
-    			fileInputStream = new FileInputStream(imgFile);
+    			
     			outputStream = new ByteArrayOutputStream();
     			out = response.getOutputStream();
     			

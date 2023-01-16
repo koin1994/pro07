@@ -1,0 +1,30 @@
+package kr.go.mss;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import kr.go.mss.dto.SampleDTO;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
+public class DTOTest {
+	private static final Logger logger = LoggerFactory.getLogger(DTOTest.class);
+
+	private SampleDTO dto;
+	
+	@Test
+	public void test3() throws Exception {
+		SampleDTO dto = new SampleDTO();
+		dto.setId("kty");
+		dto.setPw("1234");
+		Assert.assertNotNull(dto);
+		logger.info(dto);
+		logger.info(dto.getId());
+	}
+
+}

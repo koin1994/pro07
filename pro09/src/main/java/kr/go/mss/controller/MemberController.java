@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -27,7 +25,7 @@ import kr.go.mss.service.MemberService;
 @Controller
 @RequestMapping("/member/*")
 public class MemberController {
-	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+	
 	
 	//의존성 주입
 	@Autowired
@@ -147,12 +145,12 @@ public class MemberController {
 		MemberDTO member = memberService.loginCheck(mdto);
 		boolean mat = pwdEncoder.matches(mdto.getPw(), member.getPw());
 		if(mat==true && member!=null) {
-			logger.info("로그인 성공");
+			
 			session.setAttribute("member", member);
 			session.setAttribute("sid", member.getId());
 			return "redirect:/";
 		} else {
-			logger.info("로그인 실패");
+			
 			session.setAttribute("member", null);
 			rttr.addFlashAttribute("msg", false);
 			return "redirect:loginForm.do";

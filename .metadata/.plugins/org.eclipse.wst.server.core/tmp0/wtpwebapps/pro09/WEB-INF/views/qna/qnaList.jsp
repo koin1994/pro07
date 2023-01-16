@@ -32,10 +32,10 @@
 				<td><span style="color:transparent">${vo.parno }</span></td>
 				<td>
 					<c:if test="${vo.lev==0}">
-						<span>${vo.no }</span>
+						<span  style="color:white">${vo.no }</span>
 					</c:if>
 					<c:if test="${vo.lev==1}">
-						<span style="color:white">${vo.no }</span>
+						<span>${vo.no }</span>
 					</c:if>
 				</td>
 				<td><a href="./detail.do?no=${vo.no }">${vo.title }</a></td>

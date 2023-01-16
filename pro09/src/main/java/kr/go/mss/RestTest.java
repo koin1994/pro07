@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import kr.go.mss.dto.SampleDTO;
 
 @Controller
@@ -38,7 +37,7 @@ public class RestTest {
 	}
 	
 	@ResponseBody
-	@GetMapping("test1")	//일반 String으로 반환
+	@GetMapping("test1")	
 	public String test1(HttpServletRequest request) {
 		log.info("URL TEST : "+request.getRequestURL());
 		log.info("URI TEST : "+request.getRequestURI());
@@ -46,7 +45,7 @@ public class RestTest {
 		return "application request url";
 	}
 	
-	@ResponseBody			//JSON 형태로 반환 - Map
+	@ResponseBody			
 	@GetMapping("test2/{id}/{pw}")
 	public Map<String, String> test2(@PathVariable("id") String id,@PathVariable("pw") String pw) {
 		Map<String, String> res = new HashMap<>();
@@ -55,7 +54,7 @@ public class RestTest {
 		return res;
 	}
 	
-	@ResponseBody			//JSON 형태로 반환 - List
+	@ResponseBody			
 	@GetMapping("test3/{id}")
 	public List<String> test3(@PathVariable("id") String id) {
 		List<String> lst = new ArrayList<String>();
@@ -65,28 +64,28 @@ public class RestTest {
 		return lst;
 	}
 	
-	@ResponseBody			//Service에서 처리하여 JSON 형태로 반환 - Map
+	@ResponseBody		
 	@GetMapping("test4/{id}/{pw}")
 	public Map<String, String> test4(@PathVariable("id") String id,@PathVariable("pw") String pw) {
 		Map<String, String> res = restService.getTest1(id, pw);
 		return res;
 	}
 	
-	@ResponseBody			//Service에서 처리하여 JSON 형태로 반환 - List
+	@ResponseBody			
 	@GetMapping("test5/{id}")
 	public List<String> test5(@PathVariable("id") String id) {
 		List<String> lst = restService.getTest2(id);
 		return lst;
 	}
 	
-	@ResponseBody			//Service에서 처리하여 JSON 형태로 반환 - List
+	@ResponseBody			
 	@GetMapping("list")
 	public List<SampleDTO> test6() throws Exception {
 		List<SampleDTO> lst = restService.sampleList();
 		return lst;
 	}
 	
-	@ResponseBody			//Service에서 처리하여 JSON 형태로 반환 - Object
+	@ResponseBody			
 	@GetMapping("user/{id}")
 	public SampleDTO test7(@PathVariable("id") String id) throws Exception {
 		SampleDTO user = restService.getSample(id);

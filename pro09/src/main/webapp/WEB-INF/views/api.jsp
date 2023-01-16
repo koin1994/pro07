@@ -31,15 +31,15 @@
 	<h2>PUT 방식</h2>
 	<form name="updateSample" action="update" method="post">
 		<input type="hidden" name="_method" value="PUT"/>
-		<input type="text" id="id" name="id" value="kkt"><br>
-		<input type="password" id="pw" name="pw" value="123456"><br><br>
+		<input type="text" id="id" name="id" value="kty"><br>
+		<input type="password" id="pw" name="pw" value="1994"><br><br>
 		<input type="submit" value="수정">
 	</form>
 	<hr>
 	<h2>DELETE 방식</h2>
 	<form action="delete" method="POST">
 		<input type="hidden" name="_method" value="DELETE"/>
-		<input type="text" id="id" name="id" value="kkt"><br><br>
+		<input type="text" id="id" name="id" value="kty"><br><br>
 		<input type="submit" value="삭제">
 	</form>
 </body>

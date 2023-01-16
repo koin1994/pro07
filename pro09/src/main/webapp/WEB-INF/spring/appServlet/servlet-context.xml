@@ -42,9 +42,6 @@
 	<beans:bean id="uploadPath" class="java.lang.String">
 		<beans:constructor-arg value="D:\kty\pro09\pro09\src\main\webapp\resources\upload"></beans:constructor-arg>
 	</beans:bean>
-	
 	<context:component-scan base-package="kr.go.mss" />
-	
-	
-	
+
 </beans:beans>
